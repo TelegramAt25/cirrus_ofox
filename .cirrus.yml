@@ -18,7 +18,7 @@ task:
   container:
     image: ghcr.io/sushrut1101/docker:arch
     cpu: 8
-    memory: 20G
+    memory: 16G
 
   Checks_script:
     - bash -c "$(curl -sL https://raw.githubusercontent.com/fukiame/cirrus_ofox/main/scripts/checks.sh)"
