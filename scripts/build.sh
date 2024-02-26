@@ -36,13 +36,11 @@ fi
 
 echo -e \
 "
-🦊 OrangeFox Recovery CI
+ofox ci triggered
 
-✔️ The Build has been Triggered!
-
-📱 Device: "${DEVICE}"
-🖥 Build System: "${FOX_BRANCH}"
-🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+device: "${DEVICE}"
+branch: "${FOX_BRANCH}"
+<a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">logs</a>
 " > tg.html
 
 TG_TEXT=$(< tg.html)
@@ -58,7 +56,7 @@ $EXTRA_CMD
 
 # export some Basic Vars
 export ALLOW_MISSING_DEPENDENCIES=true
-export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+#export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export LC_ALL="C"
 
 # Default Build Type
